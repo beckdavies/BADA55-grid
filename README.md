@@ -1,5 +1,7 @@
 ## About
 
+http://beckdavi.es/bada55-grid/
+
 Combining the magic of grid layout with my favourite hexcodisms. This development environment uses browser-sync to automatically launch the browser as soon as changes in any html, css or js file is detected.
 
 The directory is launched in a new tab Firefox Developer Edition on port 7777. Firefox Developer Edition (at the time of writing) has the best dev tools for debugging grid layout.
