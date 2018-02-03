@@ -1,0 +1,212 @@
+<html>
+	<head>
+		<title>BADA55 grid</title>
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+
+			* {
+				box-sizing: border-box
+			}
+
+			body {
+				margin: 0;
+				background: #333;
+				font-family: 'Quicksand', sans-serif;
+			}
+
+			.container {
+				display: grid;
+		      	grid-gap: 1rem;
+		      	grid-template-columns: repeat(2, 1fr);
+		      	padding: 1rem;
+			}
+
+			.container div {
+				text-align: right;
+				padding: 2rem 1rem 1rem 1rem;
+				position: relative;
+				font-size: 4vw;
+				transition: opacity .3s ease
+			}
+
+			.container div:before {
+				content: attr(data-title);
+				display: block;
+				position: absolute;
+    			right: 1rem;
+    			bottom: 1rem;
+    			opacity: 0;
+    			transition: opacity .3s ease
+			}
+
+			.container div:hover:before {
+				opacity: 1
+			}
+
+			.container div:hover span {
+				opacity: 0;
+				transition: opacity .3s ease
+			}
+
+			span {
+				display: inline-block;
+				transition: opacity .3s ease
+				
+			}
+
+			.light {
+				color: #fff;
+			}
+
+			@media screen and (min-width: 560px) {
+
+	  			.container {
+			      	grid-template-columns: repeat(3, 1fr);
+				}
+
+				div {
+  					font-size: 3vw;	
+  				}
+
+   			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="light"
+				 data-title="BALBOA"
+				 style="background:#BA1B0A">
+				<span>#BA1B0A</span>
+			</div>
+			<div class="light"
+				 data-title="COOLER" 
+				 style="background:#C00132">
+				<span>#C00132</span>
+			</div>
+			<div class="light"
+				 data-title="DOODLE" 
+				 style="background:#D00D1E">
+				<span class="light">#D00D1E</span>
+			</div>
+			<div class="light"
+				 data-title="CARROT" 
+				 style="background:#CA2207">
+				<span>#CA2207</span>
+			</div>
+			<div data-title="BLA BLA" 
+				 style="background:#B1AB1A">
+				<span>#B1AB1A</span>
+			</div>
+			<div data-title="BABBLE" 
+				 style="background:#BABB1E">
+				<span>#BABB1E</span>
+			</div>
+			<div data-title="BADASS" 
+				 style="background:#BADA55">
+				<span>#BADA55</span>
+			</div>
+			<div data-title="BEFORE" 
+				 style="background:#BEF02E">
+				<span>#BEF02E</span>
+			</div>
+			<div data-title="BAFFLE" 
+				 style="background:#BAFF1E">
+				<span>#BAFF1E</span>
+			</div>
+			<div data-title="FREEZE" 
+				 style="background:#F2EE2E">
+				<span>#F2EE2E</span>
+			</div>
+			<div data-title="FOOBAR" 
+				 style="background:#F00BA2">
+				<span>#F00BA2</span>
+			</div>
+			<div class="light"
+				 data-title="COD" 
+				 style="background:#C0D">
+				<span>#C0D</span>
+			</div>
+			<div class="light"
+				 data-title="PISSED" 
+				 style="background:#9155ED">
+				<span>#9155ED</span>
+			</div>
+			<div data-title="PEPPER" 
+				 style="background:#9E99E2">
+				<span>#9E99E2</span>
+			</div>
+			<div data-title="BEADED" 
+				 style="background:#BEADED">
+				<span>#BEADED</span>
+			</div>
+			<div data-title="TABLES" 
+				 style="background:#7AB1E5">
+				<span>#7AB1E5</span>
+			</div>
+			<div data-title="IDE" 
+				 style="background:#1DE">
+				<span>#1DE</span>
+			</div>
+			<div data-title="SOD OFF" 
+				 style="background:#50d0ff">
+				<span>#50D0FF</span>
+			</div>
+			<div class="light" 
+				 data-title="LOG OFF"
+				 style="background:#1060FF">
+				<span>#1060FF</span>
+			</div>
+			<div class="light"
+				 data-title="SEA" 
+				 style="background:#53A">
+				<span>#53A</span>
+			</div>
+			<div class="light" 
+				 data-title="IDIOTS" 
+				 style="background:#1D1075">
+				<span>#1D1075</span>
+			</div>
+			<div class="light"
+				 data-title="RAPTOR" 
+				 style="background:#2A9702">
+				<span>#2A9702</span>
+			</div>
+
+			<div data-title="BE COOL" 
+				 style="background:#83C001">
+				<span>#83C001</span>
+			</div>
+			<div data-title="RADIAL" 
+				 style="background:#2AD1A1">
+				<span>#2AD1A1</span>
+			</div>
+			<div data-title="SEA" 
+				 style="background:#5EA">
+				<span>#5EA</span>
+			</div>		
+			<div data-title="ADD" 
+				 style="background:#4DD">
+				<span>#4DD</span>
+			</div>
+			<div data-title="RED" 
+				 style="background:#2ED">
+				<span>#2ED</span>
+			</div>
+			<div data-title="CAT" 
+				 style="background:#CA7">
+				<span>#CA7</span>
+			</div>
+			<div class="light"
+				 data-title="CLI" 
+				 style="background:#C71">
+				<span>#C71</span>
+			</div>
+			<div class="light"
+				 data-title="LA LA LA" 
+				 style="background:#1A1A1A">
+				<span>#1A1A1A</span>
+			</div>
+		</div>
+	</body>
+</html>
