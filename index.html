@@ -1,7 +1,6 @@
 <html>
 	<head>
 		<title>BADA55 grid</title>
-		<link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
 		<style type="text/css">
 
 			* {
@@ -10,22 +9,22 @@
 
 			body {
 				margin: 0;
-				background: #333;
-				font-family: 'Quicksand', sans-serif;
+				background: #fff;
+				font-family: 'Courier New', monospace;;
 			}
 
 			.container {
 				display: grid;
-				grid-gap: 1rem;
+				grid-gap: 2rem;
 				grid-template-columns: repeat(2, 1fr);
-				padding: 1rem;
+				padding: 2rem;
 			}
 
 			.container div {
 				text-align: right;
 				padding: 2rem 1rem 1rem 1rem;
 				position: relative;
-				font-size: 4vw;
+				font-size: 5vw;
 				transition: opacity .3s ease
 			}
 
@@ -70,22 +69,38 @@
 				height: 2rem
 			}
 
-			@media screen and (min-width: 560px) {
+			@media screen and (min-width: 640px) {
 
 				.container {
 					grid-template-columns: repeat(3, 1fr);
 				}
 
-				div {
+				.container div {
 					font-size: 3vw; 
 				}
 
 			}
 
+			@media screen and (min-width: 1024px) {
+
+				.container {
+					grid-template-columns: repeat(4, 1fr);
+				}
+
+				.container div {
+					font-size: 2vw; 
+				}
+
+			}
+
 		</style>
+
+		<script src="dist/js/script.js" type="text/javascript" async></script>
+
 	</head>
 	<body>
-		<div class="container">
+		<div id="js-toggle">toggle</div>
+		<div class="container" id="js-container">
 			<div class="light"
 				 	 data-title="BALBOA"
 				   style="background:#BA1B0A">
@@ -222,7 +237,7 @@
 		</div>
 		<footer class="footer">
 			<a class="footer__link" href="https://github.com/beckdavies/cv">
-				<img src="built/svg/github.svg">
+				<img src="dist/svg/github.svg">
 			</a>
 		</footer>
 	</body>
