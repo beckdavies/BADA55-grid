@@ -3,12 +3,12 @@ var foo = document.getElementById('js-container');
 
 var myColours = [
     {
-        'hexcode': '#BALBOA',
+        'hexcode': '#BA1B0A',
         'word': 'BALBOA',
         'class': 'light' 
     },
     {
-        'hexcode': '#COO132',
+        'hexcode': '#C00132',
         'word': 'COOLER',
         'class': 'light'
     },
@@ -18,37 +18,44 @@ var myColours = [
         'class': 'light'
     },
     {
-        'hexcode': '#CA22O7',
+        'hexcode': '#CA2207',
         'word': 'CARROT',
         'class': 'light' 
     },
     {
         'hexcode': '#B1AB1A',
-        'word': 'BLABLA' 
+        'word': 'BLABLA',
+        'class': 'dark' 
     },
     {
         'hexcode': '#BABB13',
-        'word': 'BABBLE' 
+        'word': 'BABBLE',
+        'class': 'dark'
     },
     {
         'hexcode': '#BADA55',
-        'word': 'BADASS' 
+        'word': 'BADASS',
+        'class': 'dark'
     },
     {
-        'hexcode': '#BEFO2E',
-        'word': 'BEFORE' 
+        'hexcode': '#BEF02E',
+        'word': 'BEFORE',
+        'class': 'dark'
     },
     {
-        'hexcode': '#BAFFI3',
-        'word': 'BAFFLE' 
+        'hexcode': '#BAFF13',
+        'word': 'BAFFLE',
+        'class': 'dark'
     },
     {
         'hexcode': '#F2EE2E',
-        'word': 'FREEZE' 
+        'word': 'FREEZE',
+        'class': 'dark'
     },
     {
         'hexcode': '#F00BA2',
-        'word': 'FOOBAR' 
+        'word': 'FOOBAR',
+        'class': 'dark'
     },
     {
         'hexcode': '#C0D',
@@ -62,28 +69,33 @@ var myColours = [
     },
     {
         'hexcode': '#9E99E2',
-        'word': 'PEPPER' 
+        'word': 'PEPPER',
+        'class': 'dark'
     },
     {
         'hexcode': '#BEADED',
-        'word': 'BEADED' 
+        'word': 'BEADED',
+        'class': 'dark'
     },
     {
         'hexcode': '#7AB1E5',
-        'word': 'TABLES' 
+        'word': 'TABLES',
+        'class': 'dark'
     },
     {
         'hexcode': '#1DE',
-        'word': 'IDE' 
+        'word': 'IDE',
+        'class': 'dark'
     },
     {
         'hexcode': '#50D0FF',
-        'word': 'SODOFF' 
+        'word': 'SODOFF',
+        'class': 'dark'
     },
     {
         'hexcode': '#1060FF',
         'word': 'LOGOFF',
-        'class': 'light' 
+        'class': 'light'
     },
     {
         'hexcode': '#53A',
@@ -102,23 +114,28 @@ var myColours = [
     },
     {
         'hexcode': '#2AD1A1',
-        'word': 'RADIAL' 
+        'word': 'RADIAL',
+        'class': 'dark'
     },
     {
         'hexcode': '#5EA',
-        'word': 'SEA' 
+        'word': 'SEA',
+        'class': 'dark'
     },
     {
         'hexcode': '#4DD',
-        'word': 'ADD' 
+        'word': 'ADD',
+        'class': 'dark'
     },
     {
         'hexcode': '#2ED',
-        'word': 'RED' 
+        'word': 'RED',
+        'class': 'dark'
     },
     {
         'hexcode': '#CA7',
-        'word': 'CAT' 
+        'word': 'CAT',
+        'class': 'dark'
     },
     {
         'hexcode': '#C71',
@@ -133,16 +150,16 @@ var myColours = [
 
 ]
 
-for (var i = 0; i < foo.children.length; i++) {
-    console.log(foo.children[i].tagName);
+var container = document.querySelector('#js-container');
+console.log(container);
 
+for (i = 0; i < myColours.length; i++) {
+    var newDiv = document.createElement("div");
+    var newSpan = document.createElement("span");
+    newDiv.setAttribute('data-title', myColours[i].word);
+    newDiv.style.backgroundColor = myColours[i].hexcode;
+    newDiv.setAttribute('class', myColours[i].class);
+    newSpan.innerHTML = myColours[i].hexcode;
+    newDiv.appendChild(newSpan);
+    container.appendChild(newDiv);
 }
-
-// get the js-container div
-// loop over the array
-// for each item in the array
-// create a div
-// set the data attribute 'data-title' to that value in word
-// set the backgorund colour to the value that is in hexcode
-// if the object has a class, set the class attribute to the value in the class attribute
-// append that div onto js-container
