@@ -1,105 +1,12 @@
 <html>
 	<head>
 		<title>BADA55 grid</title>
-		<style type="text/css">
-
-			* {
-				box-sizing: border-box
-			}
-
-			body {
-				margin: 0;
-				background: #fff;
-				font-family: 'Courier New', monospace;;
-			}
-
-			.container {
-				display: grid;
-				grid-gap: 2rem;
-				grid-template-columns: repeat(2, 1fr);
-				padding: 2rem;
-			}
-
-			.container div {
-				text-align: right;
-				padding: 2rem 1rem 1rem 1rem;
-				position: relative;
-				font-size: 5vw;
-				transition: opacity .3s ease
-			}
-
-			.container div:before {
-				content: attr(data-title);
-				display: block;
-				position: absolute;
-				right: 1rem;
-				bottom: 1rem;
-				opacity: 0;
-				transition: opacity .3s ease
-			}
-
-			.container div:hover:before {
-				opacity: 1
-			}
-
-			.container div:hover span {
-				opacity: 0;
-				transition: opacity .3s ease
-			}
-
-			span {
-				display: inline-block;
-				transition: opacity .3s ease
-				
-			}
-
-			.light {
-				color: #fff;
-			}
-
-			.footer {
-				text-align: center;
-				padding: 1rem 0;
-			}
-
-			.footer__link {
-				text-decoration: none;
-				display: inline-block;
-				width: 2rem;
-				height: 2rem
-			}
-
-			@media screen and (min-width: 640px) {
-
-				.container {
-					grid-template-columns: repeat(3, 1fr);
-				}
-
-				.container div {
-					font-size: 3vw; 
-				}
-
-			}
-
-			@media screen and (min-width: 1024px) {
-
-				.container {
-					grid-template-columns: repeat(4, 1fr);
-				}
-
-				.container div {
-					font-size: 2vw; 
-				}
-
-			}
-
-		</style>
-
+		<link rel="stylesheet" href="dist/css/styles.css" type="text/css" />
 		<script src="dist/js/script.js" type="text/javascript" async></script>
 
 	</head>
 	<body>
-		<div id="js-toggle">toggle</div>
+		<div data-jshook="toggle" class="toggle">peep</div>
 		<div class="container" id="js-container">
 		</div>
 		<footer class="footer">

@@ -151,15 +151,23 @@ var myColours = [
 ]
 
 var container = document.querySelector('#js-container');
-console.log(container);
+var wordToggle = document.querySelector(`[data-jshook="toggle"]`);
 
 for (i = 0; i < myColours.length; i++) {
     var newDiv = document.createElement("div");
     var newSpan = document.createElement("span");
     newDiv.setAttribute('data-title', myColours[i].word);
     newDiv.style.backgroundColor = myColours[i].hexcode;
-    newDiv.setAttribute('class', myColours[i].class);
+    newDiv.classList.add(myColours[i].class);
     newSpan.innerHTML = myColours[i].hexcode;
     newDiv.appendChild(newSpan);
     container.appendChild(newDiv);
 }
+
+wordToggle.onclick = function(){
+    wordToggle.innerHTML == 'peep' ? wordToggle.innerHTML = 'stopping peeping' : wordToggle.innerHTML = 'peep';
+    var theDivs = document.querySelectorAll('#js-container > div');
+    for (i = 0; i < theDivs.length; i++) {
+        theDivs[i].classList.toggle('hovered');
+    }
+ }
