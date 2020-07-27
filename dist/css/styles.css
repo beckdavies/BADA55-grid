@@ -5,7 +5,8 @@
 body {
     margin: 0;
     background: #fff;
-    font-family: 'Courier New', monospace;;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
 }
 
 .toggle {
